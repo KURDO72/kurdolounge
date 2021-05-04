@@ -1,16 +1,20 @@
 ---
 application:
-  name: "kurdolounge"
+  name: "kurdolounge-bot"
   project: "Kurdo Lounge"
   organization: "QoveryCommunity"
   storage:
-  - name: "discordbot"
-    size: "10"
+  - name: "di"
+    size: "30"
     type: "fast_ssd"
-    mount_point: "/mnt/discordbot"
+    mount_point: "/mnt/di"
+databases:
+- type: "MYSQL"
+  name: "ikbb"
+  version: "8.0"
 routers:
-- name: "main-kurdolounge"
+- name: "main-kurdolounge-bot"
   routes:
-  - application_name: "kurdolounge"
+  - application_name: "kurdolounge-bot"
     paths:
     - "/*"
